@@ -100,6 +100,7 @@ body{
 
                   <form action="/todo/{{$todo ->id}}" method="POST">
                         @csrf
+                        @method('PUT')
                         <div class="form-group">
                             <label for="">Title</label>
                             <input type="text" name="title" value="{{old('title',$todo->title)}}" class="form-control">
